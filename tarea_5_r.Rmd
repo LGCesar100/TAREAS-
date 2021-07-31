@@ -67,7 +67,7 @@ questions %>%
 #3.2
 questions %>%
   inner_join(answers, by= c("id" = "question_id"), suffix=c("_question", "_answer"))%>%
-  mutate(gap = create_date_answer - creation_date_question)
+  mutate(gap = (creation_date_answer - creation_date_question))
 ```
 
 4. Joining question and answer counts
